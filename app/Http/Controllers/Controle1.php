@@ -9,9 +9,9 @@ class Controle1 extends Controller
     public function index ()
     {
         $contatos = [
-        ["nome"=>"Maria","tel"=>"997589876"],
-        ["nome"=>"Pedro Lindo","tel"=>"98198837"],
-        ["nome"=>"Joao","tel"=>"997588876"],
+        (object)["nome"=>"Maria","tel"=>"997589876"],
+        (object)["nome"=>"Pedro Lindo","tel"=>"98198837"],
+        (object)["nome"=>"Joao","tel"=>"997588876"],
     ];
         return view('local.index',compact('contatos'));
     }
