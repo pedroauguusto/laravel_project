@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Local;
 
 class Controle1 extends Controller
 {
@@ -13,6 +14,12 @@ class Controle1 extends Controller
         (object)["nome"=>"Pedro Lindo","tel"=>"98198837"],
         (object)["nome"=>"Joao","tel"=>"997588876"],
     ];
+
+    $contato = new Local();
+    $con = $contato->lista();
+    dd($con->tel);
+
+
         return view('local.index',compact('contatos'));
     }
 
