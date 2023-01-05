@@ -126,6 +126,20 @@
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
                 </div>
+                <div>
+                    <h2>Teste com rotas:</h2>
+                    <form action="{{ url('local1') }}" method ="post">
+                        @csrf
+                        <input type="text" name="nome" placeholder="Nome / POST">
+                        <button>Enviar</button>
+                    </form>
+                </div>
+                <form action="{{ url('local1') }}" method ="post">
+                        @csrf
+                        <input type="hidden" name="_method" value="put" >
+                        <input type="text" name="nome" placeholder="Nome / PUT">
+                        <button>Enviar</button>
+                    </form>
             </div>
         </div>
     </body>
